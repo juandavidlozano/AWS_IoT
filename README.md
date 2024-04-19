@@ -1,2 +1,2 @@
-# Live Tweet App
-This repository contains the code for a live tweet streaming and sentiment analysis application.
+# AWS IoT
+This repository contains the code for a live IoT streaming and analysis application.
