@@ -1,0 +1,11 @@
+%flink.ssql(type=update)
+SELECT 
+  TUMBLE_END(proctime(), INTERVAL '1' MINUTE) as win_end,
+  AVG(barrels_per_second) as barrels_per_minute,
+  AVG(reservoir_pressure_per_second) as reservoir_pressure_per_minute
+FROM 
+  table_stream
+GROUP BY 
+  TUMBLE(proctime(), INTERVAL '1' MINUTE);
+
+
