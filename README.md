@@ -67,6 +67,29 @@ This pipeline integrates various AWS services to handle real-time sensor data pr
     - **Purpose**: Runs serverless queries against the data stored in S3 using standard SQL, leveraging the catalog maintained by AWS Glue.
     - **Benefits**: Offers fast, cost-effective, and serverless querying capabilities without the need to set up complex ETL jobs for analytical queries.
 
+12. **AWS Elastic Container Registry (ECR)**
+    - **Tool**: Amazon Elastic Container Registry (ECR).
+    - **Purpose**: Provides a Docker container registry for storing, managing, and deploying Docker container images.
+    - **Benefits**: Enables reliable and secure storage for container images, simplifying the development to production workflow by integrating seamlessly with ECS for easy deployment of containerized applications.
+
+13. **AWS Elastic Container Service (ECS)**
+    - **Tool**: Amazon Elastic Container Service (ECS).
+    - **Purpose**: Manages the deployment and scaling of containerized applications using Docker containers.
+    - **Benefits**: Automates the management of containerized applications, supports both ECS and Fargate to run containers without having to manage servers or clusters, and integrates with AWS infrastructure services like load balancing and security.
+
+14. **Kinesis Analytics with Apache Flink**
+    - **Tool**: Amazon Kinesis Analytics (with Apache Flink).
+    - **Purpose**: Allows for complex real-time data processing and analytics using Apache Flink on the data streamed through Amazon Kinesis.
+    - **Benefits**: Supports sophisticated stream processing capabilities such as event time processing, window functions, and state management. Enables users to deploy custom Flink applications directly into a managed Kinesis environment for real-time analytics.
+
+15. **Integration of ECS with S3 Events**
+    - **Tool**: AWS Lambda (trigger), Amazon ECS.
+    - **Purpose**: Triggers ECS tasks based on events in S3 (e.g., file uploads to specific S3 buckets).
+    - **Benefits**: Automates the processing of data stored in S3 by deploying Docker containers that can react to events, allowing for flexible and scalable data processing workflows.
+
+   
+
+
 ### Pipeline Benefits
 
 - **Scalability**: Each component is designed to scale with increased load, suitable for handling massive amounts of data without performance degradation.
